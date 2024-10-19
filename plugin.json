@@ -1,0 +1,31 @@
+{
+    "active": true,
+    "hubId": "open-web-page",
+    "name": "Open Web Page",
+    "schema": "skill-1.0.0",
+    "version": "1.0.0",
+    "description": "Opens a specified webpage in the default browser on macOS",
+    "author": "@assistant",
+    "license": "MIT",
+    "setup_args": {},
+    "examples": [
+        {
+            "prompt": "Open the AnythingLLM GitHub page",
+            "call": "{\"url\": \"https://github.com/Mintplex-Labs/anything-llm\"}"
+        },
+        {
+            "prompt": "Can you open Apple's website for me?",
+            "call": "{\"url\": \"https://www.apple.com\"}"
+        }
+    ],
+    "entrypoint": {
+        "file": "handler.js",
+        "params": {
+            "url": {
+                "description": "The URL of the webpage to open",
+                "type": "string"
+            }
+        }
+    },
+    "imported": true
+}
